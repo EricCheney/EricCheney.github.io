@@ -21,11 +21,11 @@ let render_projects = (slug) => {
         },
         {
             image: 'assets/images/GPU.png',
-            link: 'https://github.com/abhn/Wall-E',
+            link: '',
             title: 'GPU CAD Model',
             demo: '',
             technologies: ['CAD', 'Computer'],
-            description: "Copy of a GPU PCB design.",
+            description: "Copy of a GPU PCB design. First step before I proceed to design the cooler.",
             categories: ['featured', 'cad']
         },
 
