@@ -15,18 +15,18 @@ let render_projects = (slug) => {
             link: 'https://github.com/EricCheney/DC-Motor',
             title: 'DC Rotor',
             demo: '',
-            technologies: ['CAD', '3D Printing', 'Electrical'],
+            technologies: ['CAD', 'DIY'],
             description: "Custom designed DC motor rotor. 3D printed and used in DIY motor which was the highest performing in class by a large margin.",
-            categories: ['featured', 'CAD', 'diy']
+            categories: ['featured', 'cad', 'diy']
         },
         {
-            image: 'assets/images/mobile-landscape.jpg',
+            image: 'assets/images/GPU.png',
             link: 'https://github.com/abhn/Wall-E',
-            title: 'Wall-E',
-            demo: 'http://wall-e-jekyll.github.io/',
-            technologies: ['Semantic UI', 'Jekyll'],
-            description: "A modern Jekyll theme with grid frontpage, beautiful typography, mobile responsive, made with Semantic UI.",
-            categories: ['featured', 'Thermal']
+            title: 'GPU CAD Model',
+            demo: '',
+            technologies: ['CAD', 'Computer'],
+            description: "Copy of a GPU PCB design.",
+            categories: ['featured', 'cad']
         },
 
     ]
