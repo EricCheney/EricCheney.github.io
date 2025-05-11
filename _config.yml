@@ -1,15 +1,15 @@
-title: Abhishek Nagekar
-description: Web & Security Engineer
-site_title: '@abhn - Abhishek Nagekar'
+title: Eric Cheney
+description: Mechanical Engineering Student
+site_title: '@Eric - Eric Cheney'
 
 # Build settings
 markdown: kramdown
 exclude: [vendor/ruby]
 
 # Personalization
-github_username: abhn
+github_username: EricCheney
 blog_url: https://www.nagekar.com
-email: abhishek@nagekar.com
+email: echeney456@gmail.com
 keybase_username: abhn
 twitter_username: abhn_
 reddit_username: abhn
