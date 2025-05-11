@@ -28,6 +28,7 @@ img {
   position: relative;
 
   background: transparent;
+text-align: center;
 }
 
 .head-title {
@@ -578,4 +579,8 @@ a {
   .head-menu-wrap {
     bottom: 15px;
   }
+}
+.head-inner-wrap {
+  text-align: center;
+  max-width: 90%;
 }
