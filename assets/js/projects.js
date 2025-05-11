@@ -63,7 +63,15 @@ let project_mapper = project => {
                 <div class="card__content card__padding">
         
                     <article class="card__article">
-                      <h2>${project.title}</h2>
+                      <h2>
+  <a href="#project-details" class="project-title-link"
+     data-title="${project.title}"
+     data-description="${project.description}"
+     data-image="${project.image}"
+     data-technologies='${JSON.stringify(project.technologies)}'>
+     ${project.title}
+  </a>
+</h2>
         
                         <p class="paragraph-text-normal">${project.description} ${project.demo ? `<a href="${project.demo}">Demo</a>` : ''}</p>
                     </article>
@@ -85,7 +93,7 @@ let selected = (slug) => {
     render_projects(slug);
 }
 
-$(document).on('click', '.project-link', function (e) {
+$(document).on('click', '.project-link, .project-title-link', function (e) {
     e.preventDefault();
     
     const title = $(this).data('title');
@@ -102,6 +110,5 @@ $(document).on('click', '.project-link', function (e) {
     ).join(' ');
     $('#project-details-technologies').html(techHtml);
 
-    // Scroll to the section
     document.getElementById('project-details').scrollIntoView({ behavior: 'smooth' });
 });
