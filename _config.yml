@@ -8,11 +8,11 @@ exclude: [vendor/ruby]
 
 # Personalization
 github_username: EricCheney
-blog_url: https://www.nagekar.com
+blog_url: 
 email: echeney456@gmail.com
-keybase_username: abhn
-twitter_username: abhn_
-reddit_username: abhn
+keybase_username: 
+twitter_username: 
+reddit_username: 
 
 # absolute or relative
 profile_picture: assets/images/pp.jpg

@@ -7,14 +7,28 @@
 
                     <a id="featured" class="semi-transparent-button with-border white-button" onclick="selected('featured')">Featured</a>
                     <a id="all" class="semi-transparent-button with-border white-button" onclick="selected('all')">All</a>
-                    <a id="CAD" class="semi-transparent-button with-border white-button" onclick="selected('webdev')">WebDev</a>
-                    <a id="Thermal Analysis" class="semi-transparent-button with-border white-button" onclick="selected('native')">Native</a>
-                    <a id="General" class="semi-transparent-button with-border white-button" onclick="selected('security')">Security</a>
+                    <a id="CAD" class="semi-transparent-button with-border white-button" onclick="selected('webdev')">CAD</a>
+                    <a id="Thermal Analysis" class="semi-transparent-button with-border white-button" onclick="selected('native')">Thermal</a>
+                    <a id="General" class="semi-transparent-button with-border white-button" onclick="selected('security')">General</a>
                     <a id="diy" class="semi-transparent-button with-border white-button" onclick="selected('diy')">DIY</a>
 
                 </div>
 
             <div class="projects-wrapper">
+<section id="project-details" class="project-details-section" style="margin-top: 60px;">
+    <div class="card radius shadowDepth1">
+        <div class="card__image border-tlr-radius">
+            <img src="" alt="Project Image" id="project-details-image" class="border-tlr-radius">
+        </div>
+        <div class="card__content card__padding">
+            <article class="card__article">
+                <h2 id="project-details-title">Project Title</h2>
+                <p id="project-details-description" class="paragraph-text-normal"></p>
+            </article>
+            <div id="project-details-technologies" class="card__meta"></div>
+        </div>
+    </div>
+</section>
             <!-- filled in by js -->
             </div>
         </div>

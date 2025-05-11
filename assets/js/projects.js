@@ -174,7 +174,11 @@ let project_mapper = project => {
 
                 ${project.image ? 
                     `<div class="card__image border-tlr-radius">
-                        <a href="${project.link}">
+                       <a href="#project-details" class="project-link"
+    data-title="${project.title}"
+    data-description="${project.description}"
+    data-image="${project.image}"
+    data-technologies='${JSON.stringify(project.technologies)}'>
                             <img src="${project.image}" alt="image" id="project-image" class="border-tlr-radius">
                         </a>
                     </div>`           
@@ -205,3 +209,24 @@ let project_mapper = project => {
 let selected = (slug) => {
     render_projects(slug);
 }
+
+$(document).on('click', '.project-link', function (e) {
+    e.preventDefault();
+    
+    const title = $(this).data('title');
+    const description = $(this).data('description');
+    const image = $(this).data('image');
+    const technologies = JSON.parse($(this).attr('data-technologies'));
+
+    $('#project-details-title').text(title);
+    $('#project-details-description').text(description);
+    $('#project-details-image').attr('src', image);
+
+    const techHtml = technologies.map(tech =>
+        `<span class="project-technology paragraph-text-normal">${tech}</span>`
+    ).join(' ');
+    $('#project-details-technologies').html(techHtml);
+
+    // Scroll to the section
+    document.getElementById('project-details').scrollIntoView({ behavior: 'smooth' });
+});
