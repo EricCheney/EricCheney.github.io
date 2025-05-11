@@ -63,15 +63,7 @@ let project_mapper = project => {
                 <div class="card__content card__padding">
         
                     <article class="card__article">
-                        <h2>
-  <a href="#project-details" class="project-link"
-     data-title="${project.title}"
-     data-description="${project.description}"
-     data-image="${project.image}"
-     data-technologies='${JSON.stringify(project.technologies)}'>
-     ${project.title}
-  </a>
-</h2>
+                      <h2>${project.title}</h2>
         
                         <p class="paragraph-text-normal">${project.description} ${project.demo ? `<a href="${project.demo}">Demo</a>` : ''}</p>
                     </article>
