@@ -12,7 +12,7 @@ let render_projects = (slug) => {
     let projects_obj = [
         {
             image: 'assets/images/stator.png',
-            link: '',
+            link: 'https://github.com/EricCheney/DC-Motor',
             title: 'DC Rotor',
             demo: '',
             technologies: ['CAD', '3D Printing', 'Electrical'],
