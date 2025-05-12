@@ -31,10 +31,10 @@ let render_projects = (slug) => {
  {
             image: 'assets/images/Ames.jpg',
             link: 'https://github.com/EricCheney/Ames-Laboratory',
-            title: 'Iowa Lab Work',
+            title: 'Ames National Laboratory',
             demo: '',
             technologies: ['General'],
-            description: "Worked at Ames National Laboratory.",
+            description: "Assisted the lab director with getting a new lab up and running.",
             categories: ['featured', 'general']
         },
 
