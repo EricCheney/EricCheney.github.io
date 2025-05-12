@@ -25,8 +25,8 @@ let render_projects = (slug) => {
             title: 'GPU CAD Model',
             demo: '',
             technologies: ['CAD', 'Computer'],
-            description: "Copy of a GPU PCB design. First step before I proceed to design the cooler.",
-            categories: ['featured', 'cad']
+            description: "Copy of a GPU PCB design. First step before I proceed to design the cooler. Personal Project.",
+            categories: ['featured', 'cad', 'diy']
         },
  {
             image: 'assets/images/Ames.jpg',
