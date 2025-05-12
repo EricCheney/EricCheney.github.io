@@ -28,6 +28,15 @@ let render_projects = (slug) => {
             description: "Copy of a GPU PCB design. First step before I proceed to design the cooler.",
             categories: ['featured', 'cad']
         },
+ {
+            image: 'assets/images/Ames.jpg',
+            link: 'https://github.com/EricCheney/Ames-Laboratory',
+            title: 'Iowa Lab Work',
+            demo: '',
+            technologies: ['General'],
+            description: "Worked at Ames National Laboratory.",
+            categories: ['featured', 'general']
+        },
 
     ]
 
