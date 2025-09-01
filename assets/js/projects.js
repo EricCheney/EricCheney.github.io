@@ -15,7 +15,7 @@ let render_projects = (slug) => {
             link: 'https://github.com/EricCheney/DC-Motor',
             title: 'DC Rotor',
             demo: '',
-            technologies: ['CAD', 'DIY'],
+            technologies: ['CAD','DIY'],
             description: "Custom designed DC motor rotor. 3D printed and used in DIY motor which was the highest performing in class by a large margin.",
             categories: ['featured', 'cad', 'diy']
         },
@@ -28,7 +28,7 @@ let render_projects = (slug) => {
             description: "Copy of a GPU PCB design. First step before I proceed to design the cooler. Personal Project.",
             categories: ['featured', 'cad', 'diy']
         },
- {
+		{
             image: 'assets/images/Ames.jpg',
             link: 'https://github.com/EricCheney/Ames-Laboratory',
             title: 'Ames National Laboratory',
@@ -38,13 +38,13 @@ let render_projects = (slug) => {
             categories: ['featured', 'general']
         },
 		
- {
+		{
             image: 'assets/images/234.png',
-            link: 'https://github.com/EricCheney/Design-Project,
+            link: 'https://github.com/EricCheney/Design-Project',
             title: 'Design Project',
             demo: '',
-            technologies: ['General', 'DIY'],
-            description: "Assisted the lab director with getting a new lab up and running.",
+            technologies: ['General','DIY'],
+            description: "Entire design project including customer research.",
             categories: ['featured', 'general','diy']
         },
 
