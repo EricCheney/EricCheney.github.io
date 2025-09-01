@@ -24,7 +24,7 @@ let render_projects = (slug) => {
             link: '',
             title: 'GPU CAD Model',
             demo: '',
-            technologies: ['CAD', 'Computer'],
+            technologies: ['CAD'],
             description: "Copy of a GPU PCB design. First step before I proceed to design the cooler. Personal Project.",
             categories: ['featured', 'cad', 'diy']
         },
@@ -36,6 +36,16 @@ let render_projects = (slug) => {
             technologies: ['General'],
             description: "Assisted the lab director with getting a new lab up and running.",
             categories: ['featured', 'general']
+        },
+		
+ {
+            image: 'assets/images/234.png',
+            link: 'https://github.com/EricCheney/Design-Project,
+            title: 'Design Project',
+            demo: '',
+            technologies: ['General', 'DIY'],
+            description: "Assisted the lab director with getting a new lab up and running.",
+            categories: ['featured', 'general','diy']
         },
 
     ]
