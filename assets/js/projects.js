@@ -47,6 +47,16 @@ let render_projects = (slug) => {
             description: "Entire design project including customer research.",
             categories: ['featured', 'general','diy']
         },
+		
+		{
+            image: 'assets/images/8.png',
+            link: 'https://github.com/EricCheney/6.4-Rebuild',
+            title: '6.4L Engine Rebuild',
+            demo: '',
+            technologies: ['General','DIY'],
+            description: "Rebuilt 6.4L Powerstroke engine, diagnosing damage, machining, and restoring full performance.",
+            categories: ['featured', 'general','diy']
+        },
 
     ]
 
