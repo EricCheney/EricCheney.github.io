@@ -1,16 +1,19 @@
-
-<section class="head" id="nav">
-    <div class="head-inner-wrap">
-        <div class="profile-pic-div animated">
-            <a href="#about" class="profile-pic-link"><img src="{{ site.profile_picture }}" class="profile-pic"/></a>
-        </div>
-        <div class="head-name head-title animated" id="head-name">{{ site.title }}</div>
-        <div class="head-punchline animated">{{ site.description }}</div>
-        <div class="head-menu-wrap">
-            <a class="semi-transparent-button with-border nav-links" href="#about">ABOUT</a>
-            <a class="semi-transparent-button with-border nav-links" href="#skills">SKILLS</a>
-            <a class="semi-transparent-button with-border nav-links" href="#projects">PROJECTS</a>
-            
-        </div>
+<nav class="site-nav" aria-label="Primary navigation">
+    <a class="brand" href="#top" aria-label="Eric Cheney, home"><span class="brand-mark">EC<span aria-hidden="true">/</span></span><span>Eric Cheney</span></a>
+    <div class="nav-links"><a href="#projects">Selected work</a><a href="#experience">Experience</a><a href="#contact">Contact</a><a class="button button-small" href="{{ '/assets/Resume.pdf' | relative_url }}" target="_blank" rel="noreferrer">Resume ↗</a></div>
+</nav>
+<header class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Eric Cheney / Mechanical engineering</p>
+        <h1 id="hero-title">Mechanical engineer.<br><span>Thermal systems<br>&amp; hardware.</span></h1>
+        <p class="hero-intro">Cal Poly mechanical engineering senior · May 2027.<br>Seeking full-time mechanical and thermal engineering roles.</p>
+        <p class="hero-credentials">Thermal testing at <strong>Cisco</strong> · Research support at <strong>Ames National Laboratory</strong> · Battery cooling with <strong>Formula SAE</strong></p><div class="hero-actions"><a class="button" href="#projects">View projects <span aria-hidden="true">↘</span></a><a class="text-link" href="mailto:{{ site.email }}">Contact me ↗</a></div>
     </div>
-</section>
+    <aside class="hero-visual" aria-label="Selected engineering work">
+        <div class="visual-topline"><span>CAD / CUSTOM DC MOTOR</span><span>Selected work</span></div>
+        <div class="hardware-image"><img src="{{ '/assets/images/stator.png' | relative_url }}" alt="CAD model of my custom DC motor rotor" fetchpriority="high"><span class="image-cross cross-top" aria-hidden="true">+</span><span class="image-cross cross-bottom" aria-hidden="true">+</span></div>
+        <div class="visual-caption"><span>Custom DC motor rotor</span><a href="https://github.com/EricCheney/DC-Motor" target="_blank" rel="noreferrer">View project ↗</a></div>
+        <a class="senior-teaser" href="#ugv"><span class="eyebrow">Senior project / Raytheon / 2026–2027</span><strong>Raytheon UGV<br>Senior design</strong><span class="teaser-bottom">Early design · In progress <span aria-hidden="true">↗</span></span></a>
+    </aside>
+</header>
+<div class="proof-strip"><dl class="hero-proof" aria-label="Selected engineering results"><div><dt>3 kW</dt><dd>Cisco thermal test vehicle</dd></div><div><dt>~40%</dt><dd>Less warpage in revised test boards</dd></div><div><dt>Up to 15%</dt><dd>Lower Mini-ITX system temperatures</dd></div></dl></div>

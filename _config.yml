@@ -1,21 +1,24 @@
 title: Eric Cheney
-description: Mechanical Engineering Student
-site_title: '@Eric - Eric Cheney'
+description: Cal Poly mechanical engineering senior graduating May 2027, seeking full-time mechanical and thermal engineering roles. Experience in electronics cooling, testing, and hardware development.
+site_title: 'Eric Cheney | Thermal & Mechanical Engineering'
+url: 'https://ericcheney.github.io'
 
 # Build settings
 markdown: kramdown
-exclude: [vendor/ruby]
+exclude: [vendor/ruby, dist, tmp, .openai]
 
 # Personalization
 github_username: EricCheney
-blog_url: 
+linkedin_url: https://www.linkedin.com/in/eric-cheney-004a17217/
+location: San Jose, CA
+blog_url:
 email: echeney456@gmail.com
-keybase_username: 
-twitter_username: 
-reddit_username: 
+keybase_username:
+twitter_username:
+reddit_username:
 
 # absolute or relative
 profile_picture: assets/images/pp.jpg
 
 # Google Analytics ID
-google_analytics: 
+google_analytics:

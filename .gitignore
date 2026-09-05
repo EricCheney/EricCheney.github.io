@@ -1,4 +1,6 @@
 .idea/
 _site
+Gemfile.lock
 vendor/ruby
 .vscode
+dist/

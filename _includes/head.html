@@ -1,20 +1,31 @@
 <head>
-    {% if site.google_analytics %}
-        {% include googeanalytics.html %}
-    {% endif %}
-    
-    <title>{{ site.site_title }}</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="k4p92PduVR_7ZqAlB8-OMnONNOl9GkkmUh4dlKfbY7o" />
-    
-    <link rel="stylesheet" href="vendor/css/normalize.css"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="vendor/css/hint.base.min.css"/>
-    <link rel="stylesheet" href="vendor/css/semi-transparent-buttons.css"/>
-    <link rel="stylesheet" href="assets/css/progress.css"/>
-    <link rel="stylesheet" href="assets/css/main.css"/>
-    <link rel="stylesheet" href="assets/css/card.css"/>
-    <link rel="shortcut icon" href="assets/images/favicon.ico" />
-    <meta name="description" content="Portfolio - Abhishek Nagekar | Full stack web development, open source and information security">
+    <title>{{ site.site_title }}</title>
+    <meta name="description" content="{{ site.description }}">
+    <meta name="theme-color" content="#111b1e">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ site.site_title }}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}/assets/images/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Eric Cheney — Thermal and Mechanical Engineering">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ site.site_title }}">
+    <meta name="twitter:description" content="{{ site.description }}">
+    <meta name="twitter:image" content="{{ site.url }}/assets/images/og.png">
+    <meta name="twitter:image:alt" content="Eric Cheney — Thermal and Mechanical Engineering">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/vendor/css/normalize.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/portfolio.css' | relative_url }}">
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+    <link rel="alternate icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
 </head>
