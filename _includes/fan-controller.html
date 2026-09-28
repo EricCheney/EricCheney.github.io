@@ -6,7 +6,8 @@
         </div>
         <div class="project-copy">
             <h3 id="fan-controller-title">USB-C fan controller</h3>
-            <p>Developing a compact desktop controller for three 12 V PC fans, combining an adjustable power supply, electrical protection, and a round AMOLED interface with a clickable rotary knob.</p>
+            <p>A compact desk controller that powers and controls three 12 V PC fans from a single USB-C laptop charger, with no wall adapter or PC fan header needed. The goal is quiet, precise airflow for a desk or small enclosure, adjusted from a round 1.75-inch AMOLED display and a clickable rotary knob, with planned live fan-speed and power readouts.</p>
+            <p>I&rsquo;m designing the full system: a circular six-layer PCB in KiCad, a USB-C Power Delivery input feeding a programmable buck-boost stage that sets the fan voltage from 3 to 18 V, independent protection and monitoring, and firmware split between an STM32 power supervisor and an ESP32-S3 display module.</p>
         </div>
         <dl class="fan-controller-specs" aria-label="Design specifications">
             <div><dt>3 fans</dt><dd>Shared voltage, separate tach inputs</dd></div>
@@ -31,20 +32,12 @@
     </div>
     <div class="project-card-body fan-controller-details">
         <p class="fan-controller-caption">3D renders from the KiCad design; physical hardware testing starts when the prototypes arrive.</p>
-        <section class="fan-controller-cost" aria-labelledby="fan-controller-cost-title">
-            <h4 id="fan-controller-cost-title">Cost optimization for manufacturing</h4>
-            <p>Before ordering, I reworked the board and bill of materials against the manufacturer&rsquo;s pricing, cutting roughly $150 from the two-prototype order, about a third of the original cost.</p>
-            <ul>
-                <li><strong>Bare board: $88 &rarr; $33 (&minus;62%).</strong> Switched the finish from ENIG to OSP ($88 &rarr; $70), then enlarged all 209 of the 0.20 mm vias to 0.30 mm, which moved the six-layer board into the fab&rsquo;s standard via tier and halved the price again. Fitting the larger vias meant rerouting a dense area under the USB-C PD controller and re-verifying clearances against the fab&rsquo;s limits, while keeping the epoxy-filled, copper-capped vias the via-in-pad layout needs.</li>
-                <li><strong>Inductors: about $23 saved per board.</strong> Replaced two premium inductors with parts sized to each converter&rsquo;s actual current limit ($15.07 &rarr; $0.06 and $11.40 &rarr; $3.78), confirming saturation current against the regulators&rsquo; peak limits.</li>
-                <li><strong>Assembly fees: $30 saved per order.</strong> Moved 20 passive lines to the assembler&rsquo;s basic parts library, which has no per-line loading fee, and merged near-duplicate values.</li>
-                <li><strong>Sourcing risk removed.</strong> Replaced parts that were out of stock at the assembler with in-stock equivalents of the same specification (for example, bulk capacitors at $0.63 instead of $1.75), avoiding global-sourcing fees and delays.</li>
-            </ul>
-        </section>
+        <p class="fan-controller-note"><strong>Design for manufacture:</strong> before ordering, I reworked the layout and parts list against the manufacturer&rsquo;s pricing (OSP finish, larger vias, right-sized inductors, basic-library parts), cutting about a third of the prototype order&rsquo;s cost.</p>
         <details class="technical-details">
             <summary>Architecture, design decisions &amp; current progress</summary>
             <p><strong>Power and control:</strong> A USB-C Power Delivery input feeds a programmable buck-boost converter. A dedicated STM32 handles power supervision and sensing, while an ESP32-S3 display module provides the planned interface. The design includes an output eFuse, voltage and current monitoring, temperature sensing, and watchdog-controlled enables.</p>
             <p><strong>Design decisions:</strong> The three fan outputs share a voltage rail, with independent tachometer inputs. Current sensing uses dedicated Kelvin connections. An 80 × 80 mm removable frame provides tooling holes and fiducials for assembly of the 60 mm circular board. Via-in-pad lands require epoxy-filled, copper-capped vias throughout.</p>
+            <p><strong>Cost optimization:</strong> The bare six-layer board went from $88 to $33 by switching to an OSP finish and enlarging all 209 of the 0.20 mm vias to 0.30 mm, which meant rerouting the dense area under the USB-C PD controller. Two premium inductors were replaced with parts sized to each converter&rsquo;s current limit (about $23 per board), and 20 passive lines moved to the assembler&rsquo;s basic library, removing $30 in loading fees. Together these saved roughly $150 on the two-prototype order.</p>
             <p><strong>Current progress:</strong> Two assembled prototypes were ordered from JLCPCB in September 2026. Before ordering, the layout passed electrical-rule, design-rule and schematic-parity checks, part orientations were verified against the assembler&rsquo;s placement preview, and the bill of materials and fabrication options were optimized for cost. Firmware, the printed enclosure, and electrical and thermal bench validation are next. The 18 V ceiling is an experimental setting above a 12 V fan&rsquo;s rating; the 2 A combined continuous-output target is not yet bench-validated.</p>
         </details>
         <ul class="tag-list" aria-label="Project technologies">
@@ -53,7 +46,6 @@
             <li>Power electronics</li>
             <li>STM32 / ESP32</li>
             <li>DFM / PCB assembly</li>
-            <li>Cost reduction</li>
         </ul>
     </div>
 </article>
