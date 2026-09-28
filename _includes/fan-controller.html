@@ -1,0 +1,59 @@
+<article class="project-card fan-controller-project reveal" id="fan-controller" aria-labelledby="fan-controller-title">
+    <div class="project-card-body">
+        <div class="project-card-top">
+            <p class="project-kicker">Personal hardware project / 2026–Present</p>
+            <span class="fan-controller-status">Prototypes ordered</span>
+        </div>
+        <div class="project-copy">
+            <h3 id="fan-controller-title">USB-C fan controller</h3>
+            <p>Developing a compact desktop controller for three 12 V PC fans, combining an adjustable power supply, electrical protection, and a round AMOLED interface with a clickable rotary knob.</p>
+        </div>
+        <dl class="fan-controller-specs" aria-label="Design specifications">
+            <div><dt>3 fans</dt><dd>Shared voltage, separate tach inputs</dd></div>
+            <div><dt>60 mm</dt><dd>Circular, six-layer PCB</dd></div>
+            <div><dt>3–18 V</dt><dd>Adjustable output design range</dd></div>
+            <div><dt>1.75-inch</dt><dd>Planned round AMOLED interface</dd></div>
+        </dl>
+    </div>
+    <div class="fan-controller-gallery">
+        <figure>
+            <a href="{{ '/assets/images/fan-controller-render-top.png' | relative_url }}" target="_blank" rel="noopener" aria-label="Open the fan controller top-side 3D render at full size">
+                <img src="{{ '/assets/images/fan-controller-render-top.png' | relative_url }}" alt="KiCad 3D render of the top of the circular fan controller board, showing the USB-C input, power inductor, MOSFETs, capacitors and three fan headers" width="942" height="775" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Top side · Power conversion and fan connections</figcaption>
+        </figure>
+        <figure>
+            <a href="{{ '/assets/images/fan-controller-render-bottom.png' | relative_url }}" target="_blank" rel="noopener" aria-label="Open the fan controller bottom-side 3D render at full size">
+                <img src="{{ '/assets/images/fan-controller-render-bottom.png' | relative_url }}" alt="KiCad 3D render of the bottom of the board, showing the STM32 microcontroller, logic, sensing parts, connectors and the SWD debug header" width="968" height="744" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Bottom side · Control, sensing, and interfaces</figcaption>
+        </figure>
+    </div>
+    <div class="project-card-body fan-controller-details">
+        <p class="fan-controller-caption">3D renders from the KiCad design; physical hardware testing starts when the prototypes arrive.</p>
+        <section class="fan-controller-cost" aria-labelledby="fan-controller-cost-title">
+            <h4 id="fan-controller-cost-title">Cost optimization for manufacturing</h4>
+            <p>Before ordering, I reworked the board and bill of materials against the manufacturer&rsquo;s pricing, cutting roughly $150 from the two-prototype order, about a third of the original cost.</p>
+            <ul>
+                <li><strong>Bare board: $88 &rarr; $33 (&minus;62%).</strong> Switched the finish from ENIG to OSP ($88 &rarr; $70), then enlarged all 209 of the 0.20 mm vias to 0.30 mm, which moved the six-layer board into the fab&rsquo;s standard via tier and halved the price again. Fitting the larger vias meant rerouting a dense area under the USB-C PD controller and re-verifying clearances against the fab&rsquo;s limits, while keeping the epoxy-filled, copper-capped vias the via-in-pad layout needs.</li>
+                <li><strong>Inductors: about $23 saved per board.</strong> Replaced two premium inductors with parts sized to each converter&rsquo;s actual current limit ($15.07 &rarr; $0.06 and $11.40 &rarr; $3.78), confirming saturation current against the regulators&rsquo; peak limits.</li>
+                <li><strong>Assembly fees: $30 saved per order.</strong> Moved 20 passive lines to the assembler&rsquo;s basic parts library, which has no per-line loading fee, and merged near-duplicate values.</li>
+                <li><strong>Sourcing risk removed.</strong> Replaced parts that were out of stock at the assembler with in-stock equivalents of the same specification (for example, bulk capacitors at $0.63 instead of $1.75), avoiding global-sourcing fees and delays.</li>
+            </ul>
+        </section>
+        <details class="technical-details">
+            <summary>Architecture, design decisions &amp; current progress</summary>
+            <p><strong>Power and control:</strong> A USB-C Power Delivery input feeds a programmable buck-boost converter. A dedicated STM32 handles power supervision and sensing, while an ESP32-S3 display module provides the planned interface. The design includes an output eFuse, voltage and current monitoring, temperature sensing, and watchdog-controlled enables.</p>
+            <p><strong>Design decisions:</strong> The three fan outputs share a voltage rail, with independent tachometer inputs. Current sensing uses dedicated Kelvin connections. An 80 × 80 mm removable frame provides tooling holes and fiducials for assembly of the 60 mm circular board. Via-in-pad lands require epoxy-filled, copper-capped vias throughout.</p>
+            <p><strong>Current progress:</strong> Two assembled prototypes were ordered from JLCPCB in September 2026. Before ordering, the layout passed electrical-rule, design-rule and schematic-parity checks, part orientations were verified against the assembler&rsquo;s placement preview, and the bill of materials and fabrication options were optimized for cost. Firmware, the printed enclosure, and electrical and thermal bench validation are next. The 18 V ceiling is an experimental setting above a 12 V fan&rsquo;s rating; the 2 A combined continuous-output target is not yet bench-validated.</p>
+        </details>
+        <ul class="tag-list" aria-label="Project technologies">
+            <li>USB-C PD</li>
+            <li>KiCad</li>
+            <li>Power electronics</li>
+            <li>STM32 / ESP32</li>
+            <li>DFM / PCB assembly</li>
+            <li>Cost reduction</li>
+        </ul>
+    </div>
+</article>

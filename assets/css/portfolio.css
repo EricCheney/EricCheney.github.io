@@ -33,3 +33,23 @@
 .course-image{aspect-ratio:16/10;background:#e5e8eb}.course-image img{object-fit:contain;padding:16px}.course-finding{margin:20px 0 0;font-size:1rem;color:var(--ink-soft)}.evidence-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.9375rem;line-height:1.5}.evidence-table caption{text-align:left;font-weight:600;margin-bottom:10px}.evidence-table th,.evidence-table td{text-align:left;vertical-align:top;padding:10px 6px;border-bottom:1px solid var(--line)}.evidence-table th{font-weight:600}.evidence-source{font-size:.8125rem;color:var(--ink-soft)}
 
 .evidence-source a{display:inline-flex;align-items:center;min-height:44px;font-size:.9375rem;font-weight:600;text-underline-offset:4px}
+
+/* USB-C fan controller: prototype case study and supplied assembly previews. */
+.fan-controller-project{grid-column:1/-1;overflow:hidden;scroll-margin-top:24px}
+.fan-controller-project .project-card-top{gap:20px;flex-wrap:wrap;align-items:center}
+.fan-controller-project .project-kicker{margin:0}
+.fan-controller-project .project-copy{max-width:880px}
+.fan-controller-project .project-copy h3{margin-top:20px}
+.fan-controller-status{font:500 .875rem/1.5 var(--mono);color:var(--signal-dark);padding:7px 12px;background:#fff0e9;border:1px solid #e2b39f}
+.fan-controller-specs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:28px 0 0;padding-top:22px;border-top:1px solid var(--line)}
+.fan-controller-specs dt{font:600 1.3rem/1.4 var(--mono);color:var(--ink)}
+.fan-controller-specs dd{margin:6px 0 0;font-size:.875rem;line-height:1.6;color:var(--ink-soft)}
+.fan-controller-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line)}
+.fan-controller-gallery figure{margin:0;background:#e6e8eb;min-width:0}
+.fan-controller-gallery a{display:block}
+.fan-controller-gallery img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain}
+.fan-controller-gallery figcaption{padding:14px 24px;font:500 .875rem/1.6 var(--mono);color:var(--ink);background:var(--paper)}
+.fan-controller-caption{margin:0;font-size:.875rem;line-height:1.6;color:var(--ink-soft)}
+.fan-controller-details .technical-details{max-width:980px}
+.fan-controller-cost{margin:24px 0 0;padding:22px 0 4px;border-top:1px solid var(--line)}.fan-controller-cost h4{margin:0 0 10px;font:600 1.05rem/1.4 var(--mono);color:var(--ink)}.fan-controller-cost p{margin:0 0 12px;max-width:880px;line-height:1.65}.fan-controller-cost ul{margin:0;padding-left:20px;max-width:980px}.fan-controller-cost li{margin:0 0 10px;line-height:1.65;color:var(--ink-soft)}.fan-controller-cost li strong{color:var(--ink)}
+@media(max-width:700px){.fan-controller-specs{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.fan-controller-gallery{grid-template-columns:1fr}.fan-controller-gallery figcaption{padding:12px 20px}.fan-controller-project .project-card-top{align-items:flex-start;gap:12px}}
