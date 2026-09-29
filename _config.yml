@@ -9,7 +9,7 @@ exclude: [vendor/ruby, dist, tmp, .openai]
 
 # Personalization
 github_username: EricCheney
-linkedin_url: https://www.linkedin.com/in/eric-cheney-004a17217/
+linkedin_url: https://www.linkedin.com/in/ericcheney/
 location: San Jose, CA
 blog_url:
 email: echeney456@gmail.com
