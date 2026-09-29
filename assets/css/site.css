@@ -391,11 +391,11 @@ em.thermal-text {
 .viewport-dots { display: flex; gap: 6px; }
 .viewport-dots i { width: 9px; height: 9px; border-radius: 50%; background: var(--surface-3); border: 1px solid var(--border-strong); }
 .viewport-tag { padding: 2px 8px; border-radius: 6px; border: 1px solid var(--border-strong); }
-.viewport-canvas { position: relative; aspect-ratio: 840 / 520; background: linear-gradient(180deg, #b9c9dd, #dfe8f3); overflow: hidden; }
-.viewport-canvas img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.02); transition: transform 1.2s var(--ease-out); }
+.viewport-canvas { position: relative; aspect-ratio: 16 / 11; background: radial-gradient(70% 70% at 50% 45%, #10161a, #000); overflow: hidden; }
+.viewport-canvas img { width: 100%; height: 100%; object-fit: contain; transform: scale(1.02); transition: transform 1.2s var(--ease-out); }
 .viewport:hover .viewport-canvas img { transform: scale(1.08); }
-.crosshair { position: absolute; width: 18px; height: 18px; opacity: .5; }
-.crosshair::before, .crosshair::after { content: ""; position: absolute; background: #3b4452; }
+.crosshair { position: absolute; width: 18px; height: 18px; opacity: .45; }
+.crosshair::before, .crosshair::after { content: ""; position: absolute; background: #8b95a1; }
 .crosshair::before { left: 50%; top: 0; bottom: 0; width: 1px; }
 .crosshair::after { top: 50%; left: 0; right: 0; height: 1px; }
 .crosshair-tl { top: 14px; left: 14px; }
@@ -534,6 +534,7 @@ em.thermal-text {
 .course-media { aspect-ratio: 4 / 3; }
 #gearbox .card-media img { object-position: center 62%; }
 #scooter .card-media img { object-position: center 58%; }
+.dc-motor-media img { object-position: 40% 55%; }
 .card-media::after {
     content: ""; position: absolute; inset: 0; pointer-events: none;
     background: linear-gradient(180deg, transparent 60%, color-mix(in srgb, var(--surface) 35%, transparent));
