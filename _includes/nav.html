@@ -1,19 +1,29 @@
-<nav class="site-nav" aria-label="Primary navigation">
-    <a class="brand" href="#top" aria-label="Eric Cheney, home"><span class="brand-mark">EC<span aria-hidden="true">/</span></span><span>Eric Cheney</span></a>
-    <div class="nav-links"><a href="#projects">Selected work</a><a href="#experience">Experience</a><a href="#contact">Contact</a><a class="button button-small" href="{{ '/assets/Resume.pdf' | relative_url }}" target="_blank" rel="noreferrer">Resume ↗</a></div>
-</nav>
-<header class="hero" aria-labelledby="hero-title">
-    <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Eric Cheney / Mechanical engineering</p>
-        <h1 id="hero-title">Mechanical engineer.<br><span>Thermal systems<br>&amp; hardware.</span></h1>
-        <p class="hero-intro">Cal Poly mechanical engineering senior · May 2027.<br>Seeking full-time mechanical and thermal engineering roles.</p>
-        <p class="hero-credentials">Thermal testing at <strong>Cisco</strong> · Research support at <strong>Ames National Laboratory</strong> · Battery cooling with <strong>Formula SAE</strong></p><div class="hero-actions"><a class="button" href="#projects">View projects <span aria-hidden="true">↘</span></a><a class="text-link" href="mailto:{{ site.email }}">Contact me ↗</a></div>
-    </div>
-    <aside class="hero-visual" aria-label="Selected engineering work">
-        <div class="visual-topline"><span>CAD / CUSTOM DC MOTOR</span><span>Selected work</span></div>
-        <div class="hardware-image"><img src="{{ '/assets/images/stator.png' | relative_url }}" alt="CAD model of my custom DC motor rotor" fetchpriority="high"><span class="image-cross cross-top" aria-hidden="true">+</span><span class="image-cross cross-bottom" aria-hidden="true">+</span></div>
-        <div class="visual-caption"><span>Custom DC motor rotor</span><a href="https://github.com/EricCheney/DC-Motor" target="_blank" rel="noreferrer">View project ↗</a></div>
-        <a class="senior-teaser" href="#ugv"><span class="eyebrow">Senior project / Raytheon / 2026–2027</span><strong>Raytheon UGV<br>Senior design</strong><span class="teaser-bottom">Early design · In progress <span aria-hidden="true">↗</span></span></a>
-    </aside>
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<header class="site-header" data-header>
+    <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Eric Cheney, home">
+            <span class="brand-mark" aria-hidden="true">EC</span>
+            <span class="brand-name">Eric Cheney</span>
+        </a>
+
+        <div class="nav-links" id="nav-links" data-nav-links>
+            <span class="nav-indicator" aria-hidden="true" data-nav-indicator></span>
+            <a href="#projects" data-nav-link>Work</a>
+            <a href="#experience" data-nav-link>Experience</a>
+            <a href="#capabilities" data-nav-link>Skills</a>
+            <a href="#contact" data-nav-link>Contact</a>
+            <a class="nav-resume-mobile" href="{{ '/assets/Resume.pdf' | relative_url }}" target="_blank" rel="noreferrer">Resume ↗</a>
+        </div>
+
+        <div class="nav-actions">
+            <button class="icon-button" type="button" aria-label="Switch color theme" data-theme-toggle>
+                <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
+            </button>
+            <a class="button button-sm nav-resume" href="{{ '/assets/Resume.pdf' | relative_url }}" target="_blank" rel="noreferrer">Resume <span class="arrow" aria-hidden="true">↗</span></a>
+            <button class="icon-button menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links" data-menu-toggle>
+                <span></span><span></span>
+            </button>
+        </div>
+    </nav>
 </header>
-<div class="proof-strip"><dl class="hero-proof" aria-label="Selected engineering results"><div><dt>3 kW</dt><dd>Cisco thermal test vehicle</dd></div><div><dt>~40%</dt><dd>Less warpage in revised test boards</dd></div><div><dt>Up to 15%</dt><dd>Lower Mini-ITX system temperatures</dd></div></dl></div>

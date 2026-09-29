@@ -1,0 +1,89 @@
+<section class="hero" aria-labelledby="hero-title">
+    <div class="hero-bg" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <div class="heat heat-1"></div>
+        <div class="heat heat-2"></div>
+        <div class="heat heat-3"></div>
+    </div>
+
+    <div class="container hero-inner">
+        <div class="hero-copy">
+            <a class="status-pill intro" style="--i:0" href="#contact">
+                <span class="pulse" aria-hidden="true"></span>
+                Seeking full-time roles · Graduating May 2027
+            </a>
+
+            <h1 id="hero-title" class="hero-title">
+                <span class="line"><span class="intro" style="--i:1">Mechanical engineer.</span></span>
+                <span class="line"><span class="intro" style="--i:2"><em class="thermal-text">Thermal systems</em></span></span>
+                <span class="line"><span class="intro" style="--i:3">&amp; hardware.</span></span>
+            </h1>
+
+            <p class="hero-intro intro" style="--i:4">Cal Poly mechanical engineering senior · May 2027. Seeking full-time mechanical and thermal engineering roles.</p>
+
+            <ul class="hero-orgs intro" style="--i:5" aria-label="Experience highlights">
+                <li><strong>Cisco</strong><span>Thermal testing</span></li>
+                <li><strong>Ames National Laboratory</strong><span>Research support</span></li>
+                <li><strong>Formula SAE</strong><span>Battery cooling</span></li>
+            </ul>
+
+            <div class="hero-actions intro" style="--i:6">
+                <a class="button button-primary" href="#projects">View projects <span class="arrow" aria-hidden="true">↓</span></a>
+                <a class="button button-ghost" href="mailto:{{ site.email }}">Contact me <span class="arrow" aria-hidden="true">↗</span></a>
+            </div>
+        </div>
+
+        <div class="hero-visual intro" style="--i:3">
+            <figure class="viewport" data-tilt>
+                <div class="viewport-bar">
+                    <span class="viewport-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                    <span>CAD / Custom DC motor</span>
+                    <span class="viewport-tag">ISO</span>
+                </div>
+                <div class="viewport-canvas">
+                    <img src="{{ '/assets/images/stator.png' | relative_url }}" alt="CAD model of my custom DC motor rotor" width="840" height="561" fetchpriority="high">
+                    <span class="crosshair crosshair-tl" aria-hidden="true"></span>
+                    <span class="crosshair crosshair-br" aria-hidden="true"></span>
+                </div>
+                <figcaption class="viewport-caption">
+                    <span>Custom DC motor rotor</span>
+                    <a href="https://github.com/EricCheney/DC-Motor" target="_blank" rel="noreferrer">View project <span aria-hidden="true">↗</span></a>
+                </figcaption>
+            </figure>
+
+            <a class="teaser" href="#ugv" data-spotlight>
+                <span class="teaser-kicker">Senior project · Raytheon · 2026–2027</span>
+                <strong>Raytheon UGV senior design</strong>
+                <span class="teaser-foot"><span><span class="pulse pulse-sm" aria-hidden="true"></span> Early design · In progress</span><span class="arrow" aria-hidden="true">→</span></span>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <dl class="stats" aria-label="Selected engineering results">
+            <div class="stat reveal">
+                <dt><span data-count="3" data-suffix=" kW">3 kW</span></dt>
+                <dd>Cisco thermal test vehicle</dd>
+            </div>
+            <div class="stat reveal">
+                <dt><span data-count="40" data-prefix="~" data-suffix="%">~40%</span></dt>
+                <dd>Less warpage in revised test boards</dd>
+            </div>
+            <div class="stat reveal">
+                <dt><span data-count="15" data-prefix="Up to " data-suffix="%">Up to 15%</span></dt>
+                <dd>Lower Mini-ITX system temperatures</dd>
+            </div>
+        </dl>
+    </div>
+
+    <div class="marquee" aria-label="Tools and methods">
+        <div class="marquee-track">
+            {% assign tools = "Siemens NX,SolidWorks,Ansys Icepak,Simcenter Flotherm,KiCad,Fusion 360,Autodesk Inventor,LTspice,MATLAB,C++,GD&T,CFD,FEA,TIG / MIG welding,Mill & lathe,3D printing" | split: "," %}
+            {% for pass in (1..2) %}
+            <ul{% if pass == 2 %} aria-hidden="true"{% endif %}>
+                {% for tool in tools %}<li>{{ tool | escape }}</li>{% endfor %}
+            </ul>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -1,31 +1,42 @@
-<article class="project-card project-card-image course-project reveal" id="gearbox">
-    <div class="project-image course-image"><img src="{{ '/assets/images/winch-gearbox.jpg' | relative_url }}" alt="Team gearbox prototype adapted from a Harbor Freight hand winch with a modified output shaft and handle" loading="lazy"></div>
-    <div class="project-card-body">
-        <p class="project-kicker">Course team project / ME 329 / Spring 2026</p>
-        <div class="project-copy"><h3>Hand-winch gearbox</h3><p><strong>My contribution:</strong> Engineering analysis of a gearbox adapted from a Harbor Freight hand winch.</p></div>
-        <p class="course-finding"><strong>Team result:</strong> 275 lb tested maximum load from a $56 build. Our final design review reported the strongest performance per dollar in the class.</p>
+<article class="card card-media-top span-6 reveal" id="gearbox" data-spotlight>
+    <a class="card-media course-media" href="{{ '/assets/images/winch-gearbox.jpg' | relative_url }}" data-lightbox aria-label="Open the gearbox prototype photo at full size">
+        <img src="{{ '/assets/images/winch-gearbox.jpg' | relative_url }}" alt="Team gearbox prototype adapted from a Harbor Freight hand winch with a modified output shaft and handle" width="1157" height="1429" loading="lazy" decoding="async">
+    </a>
+    <div class="card-body">
+        <div class="card-meta"><span class="kicker">Course team project · ME 329 · Spring 2026</span></div>
+        <h3>Hand-winch gearbox</h3>
+        <p><strong>My contribution:</strong> Engineering analysis of a gearbox adapted from a Harbor Freight hand winch.</p>
+        <div class="mini-stats">
+            <div><strong>275 lb</strong><span>Tested maximum load</span></div>
+            <div><strong>$56</strong><span>Build cost</span></div>
+        </div>
+        <p class="finding"><strong>Team result:</strong> 275 lb tested maximum load from a $56 build. Our final design review reported the strongest performance per dollar in the class.</p>
         <details class="technical-details"><summary>Cost, load testing &amp; engineering analysis</summary>
             <p><strong>Starting point:</strong> An existing 40:1 worm-drive hand winch. The team modified the spool, output shaft, and handle; the gearing was adapted from the commercial unit.</p>
             <p><strong>Report analysis:</strong> Shaft bending and torsion, keyway and shoulder stress concentrations, fatigue, gear behavior, and fastening loads.</p>
             <table class="evidence-table"><caption>Team cost and test outcomes</caption><thead><tr><th scope="col">Test</th><th scope="col">Result</th></tr></thead><tbody><tr><th scope="row">Build cost</th><td>$56</td></tr><tr><th scope="row">Tested maximum load</th><td>275 lb</td></tr></tbody></table>
             <p><strong>Engineering lesson:</strong> The keyway was an analytical concern, but the shaft-to-spool connection limited the physical test.</p>
             <p><strong>Limitations:</strong> The report’s shaft-fatigue result fell below its stated target. Short-duration load testing did not validate fatigue life. A stronger shaft connection and material changes were proposed for future iterations.</p>
-            <p class="evidence-source"><a href="{{ '/assets/reports/ME329-Gearbox-Final-Design-Report.pdf' | relative_url }}" target="_blank" rel="noopener">View full gearbox report (PDF) ↗</a><br>ME 329 team final design report, pp. 6, 8–10, 13–15; maximum load updated from final project results.</p>
+            <p class="evidence-source"><a href="{{ '/assets/reports/ME329-Gearbox-Final-Design-Report.pdf' | relative_url }}" target="_blank" rel="noopener">View full gearbox report (PDF) <span aria-hidden="true">↗</span></a><br>ME 329 team final design report, pp. 6, 8–10, 13–15; maximum load updated from final project results.</p>
         </details>
         <ul class="tag-list" aria-label="Project methods"><li>Mechanical analysis</li><li>Worm drive</li><li>Failure analysis</li></ul>
     </div>
 </article>
-<article class="project-card project-card-image course-project reveal" id="scooter">
-    <div class="project-image course-image"><img src="{{ '/assets/images/scooterrari-cad.jpg' | relative_url }}" alt="CAD assembly of the Scooterrari PVC knee scooter with parallel frame members and three wheels" loading="lazy"></div>
-    <div class="project-card-body">
-        <p class="project-kicker">Course team project / ME 328 / Winter 2026</p>
-        <div class="project-copy"><h3>PVC knee scooter</h3><p><strong>My contribution:</strong> CAD and finite element analysis for the team’s Scooterrari knee scooter.</p></div>
-        <p class="course-finding"><strong>Design work:</strong> Developed the scooter CAD and evaluated frame bending and column buckling using finite element analysis.</p>
+
+<article class="card card-media-top span-6 reveal" id="scooter" data-spotlight>
+    <a class="card-media course-media" href="{{ '/assets/images/scooterrari-cad.jpg' | relative_url }}" data-lightbox aria-label="Open the knee scooter CAD assembly at full size">
+        <img src="{{ '/assets/images/scooterrari-cad.jpg' | relative_url }}" alt="CAD assembly of the Scooterrari PVC knee scooter with parallel frame members and three wheels" width="1048" height="1098" loading="lazy" decoding="async">
+    </a>
+    <div class="card-body">
+        <div class="card-meta"><span class="kicker">Course team project · ME 328 · Winter 2026</span></div>
+        <h3>PVC knee scooter</h3>
+        <p><strong>My contribution:</strong> CAD and finite element analysis for the team’s Scooterrari knee scooter.</p>
+        <p class="finding"><strong>Design work:</strong> Developed the scooter CAD and evaluated frame bending and column buckling using finite element analysis.</p>
         <details class="technical-details"><summary>CAD, structural analysis &amp; design decisions</summary>
             <p>The team targeted a 160 lb rider load and less than 0.25 in deflection. The report compares hand calculations with a beam-element FEA model of the horizontal frame members.</p>
             <p><strong>Analysis approach:</strong> Compared hand calculations with beam-element FEA for the horizontal frame and used buckling studies to assess the steering column and seat post under modeled loads.</p>
             <p><strong>Team recommendations:</strong> Increase frame stiffness, shorten the horizontal members, and improve steering and wheel support. These were proposed improvements, not validated revisions.</p>
-            <p class="evidence-source"><a href="{{ '/assets/reports/ME328-Scooterrari-Final-Design-Report.pdf' | relative_url }}" target="_blank" rel="noopener">View full scooter report (PDF) ↗</a><br>ME 328 team final design report, pp. 4, 19, 23–25.</p>
+            <p class="evidence-source"><a href="{{ '/assets/reports/ME328-Scooterrari-Final-Design-Report.pdf' | relative_url }}" target="_blank" rel="noopener">View full scooter report (PDF) <span aria-hidden="true">↗</span></a><br>ME 328 team final design report, pp. 4, 19, 23–25.</p>
         </details>
         <ul class="tag-list" aria-label="Project methods"><li>CAD</li><li>FEA</li><li>Structural analysis</li></ul>
     </div>

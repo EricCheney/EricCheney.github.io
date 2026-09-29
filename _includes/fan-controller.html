@@ -1,38 +1,42 @@
-<article class="project-card fan-controller-project reveal" id="fan-controller" aria-labelledby="fan-controller-title">
-    <div class="project-card-body">
-        <div class="project-card-top">
-            <p class="project-kicker">Personal hardware project / 2026–Present</p>
-            <span class="fan-controller-status">Prototypes ordered</span>
-        </div>
-        <div class="project-copy">
+<article class="card card-wide fan-controller span-12 reveal" id="fan-controller" aria-labelledby="fan-controller-title" data-spotlight>
+    <div class="fan-layout">
+        <div class="card-body">
+            <div class="card-meta">
+                <span class="kicker">Personal hardware project · 2026–Present</span>
+                <span class="status-chip"><span class="pulse pulse-sm" aria-hidden="true"></span>Prototypes ordered</span>
+            </div>
             <h3 id="fan-controller-title">USB-C fan controller</h3>
             <p>A compact desk controller that powers and controls three 12 V PC fans from a single USB-C laptop charger, with no wall adapter or PC fan header needed. The goal is quiet, precise airflow for a desk or small enclosure, adjusted from a round 1.75-inch AMOLED display and a clickable rotary knob, with planned live fan-speed and power readouts.</p>
             <p>I&rsquo;m designing the full system: a circular six-layer PCB in KiCad, a USB-C Power Delivery input feeding a programmable buck-boost stage that sets the fan voltage from 3 to 18 V, independent protection and monitoring, and firmware split between an STM32 power supervisor and an ESP32-S3 display module.</p>
+            <dl class="spec-grid" aria-label="Design specifications">
+                <div><dt>3 fans</dt><dd>Shared voltage, separate tach inputs</dd></div>
+                <div><dt>60 mm</dt><dd>Circular, six-layer PCB</dd></div>
+                <div><dt>3–18 V</dt><dd>Adjustable output design range</dd></div>
+                <div><dt>1.75-inch</dt><dd>Planned round AMOLED interface</dd></div>
+            </dl>
         </div>
-        <dl class="fan-controller-specs" aria-label="Design specifications">
-            <div><dt>3 fans</dt><dd>Shared voltage, separate tach inputs</dd></div>
-            <div><dt>60 mm</dt><dd>Circular, six-layer PCB</dd></div>
-            <div><dt>3–18 V</dt><dd>Adjustable output design range</dd></div>
-            <div><dt>1.75-inch</dt><dd>Planned round AMOLED interface</dd></div>
-        </dl>
+
+        <div class="fan-gallery">
+            <figure>
+                <a href="{{ '/assets/images/fan-controller-render-top.png' | relative_url }}" data-lightbox aria-label="Open the fan controller top-side 3D render at full size">
+                    <img src="{{ '/assets/images/fan-controller-render-top.png' | relative_url }}" alt="KiCad 3D render of the top of the circular fan controller board, showing the USB-C input, power inductor, MOSFETs, capacitors and three fan headers" width="942" height="775" loading="lazy" decoding="async">
+                    <span class="zoom-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                </a>
+                <figcaption><span>Top side</span> Power conversion and fan connections</figcaption>
+            </figure>
+            <figure>
+                <a href="{{ '/assets/images/fan-controller-render-bottom.png' | relative_url }}" data-lightbox aria-label="Open the fan controller bottom-side 3D render at full size">
+                    <img src="{{ '/assets/images/fan-controller-render-bottom.png' | relative_url }}" alt="KiCad 3D render of the bottom of the board, showing the STM32 microcontroller, logic, sensing parts, connectors and the SWD debug header" width="968" height="744" loading="lazy" decoding="async">
+                    <span class="zoom-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                </a>
+                <figcaption><span>Bottom side</span> Control, sensing, and interfaces</figcaption>
+            </figure>
+        </div>
     </div>
-    <div class="fan-controller-gallery">
-        <figure>
-            <a href="{{ '/assets/images/fan-controller-render-top.png' | relative_url }}" target="_blank" rel="noopener" aria-label="Open the fan controller top-side 3D render at full size">
-                <img src="{{ '/assets/images/fan-controller-render-top.png' | relative_url }}" alt="KiCad 3D render of the top of the circular fan controller board, showing the USB-C input, power inductor, MOSFETs, capacitors and three fan headers" width="942" height="775" loading="lazy" decoding="async">
-            </a>
-            <figcaption>Top side · Power conversion and fan connections</figcaption>
-        </figure>
-        <figure>
-            <a href="{{ '/assets/images/fan-controller-render-bottom.png' | relative_url }}" target="_blank" rel="noopener" aria-label="Open the fan controller bottom-side 3D render at full size">
-                <img src="{{ '/assets/images/fan-controller-render-bottom.png' | relative_url }}" alt="KiCad 3D render of the bottom of the board, showing the STM32 microcontroller, logic, sensing parts, connectors and the SWD debug header" width="968" height="744" loading="lazy" decoding="async">
-            </a>
-            <figcaption>Bottom side · Control, sensing, and interfaces</figcaption>
-        </figure>
-    </div>
-    <div class="project-card-body fan-controller-details">
-        <p class="fan-controller-caption">3D renders from the KiCad design; physical hardware testing starts when the prototypes arrive.</p>
-        <p class="fan-controller-note"><strong>Design for manufacture:</strong> before ordering, I reworked the layout and parts list against the manufacturer&rsquo;s pricing (OSP finish, larger vias, right-sized inductors, basic-library parts), cutting about a third of the prototype order&rsquo;s cost.</p>
+
+    <div class="card-body fan-details">
+        <p class="fine-print">3D renders from the KiCad design; physical hardware testing starts when the prototypes arrive.</p>
+        <p class="callout"><strong>Design for manufacture:</strong> before ordering, I reworked the layout and parts list against the manufacturer&rsquo;s pricing (OSP finish, larger vias, right-sized inductors, basic-library parts), cutting about a third of the prototype order&rsquo;s cost.</p>
         <details class="technical-details">
             <summary>Architecture, design decisions &amp; current progress</summary>
             <p><strong>Power and control:</strong> A USB-C Power Delivery input feeds a programmable buck-boost converter. A dedicated STM32 handles power supervision and sensing, while an ESP32-S3 display module provides the planned interface. The design includes an output eFuse, voltage and current monitoring, temperature sensing, and watchdog-controlled enables.</p>

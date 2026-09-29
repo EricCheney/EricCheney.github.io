@@ -1,12 +1,23 @@
-<section class="contact-section" id="contact">
-    <div class="section-inner reveal">
-        <p class="eyebrow">04 / Contact</p>
-        <h2>Let’s talk engineering.</h2>
-        <p>I’m seeking full-time mechanical and thermal engineering roles starting after my May 2027 graduation.</p>
-        <div class="contact-actions">
-            <a class="button button-light" href="mailto:{{ site.email }}">{{ site.email }} <span aria-hidden="true">↗</span></a>
-            <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noreferrer">GitHub ↗</a>
-            <a href="{{ site.linkedin_url }}" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+<section class="section contact" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+        <div class="contact-panel reveal">
+            <div class="contact-glow" aria-hidden="true"></div>
+            <p class="section-kicker"><span>04</span> Contact</p>
+            <h2 id="contact-title">Let’s talk <em class="thermal-text">engineering.</em></h2>
+            <p class="contact-lede">I’m seeking full-time mechanical and thermal engineering roles starting after my May 2027 graduation.</p>
+            <div class="contact-actions">
+                <div class="email-group">
+                    <a class="button button-primary button-lg" href="mailto:{{ site.email }}">{{ site.email }} <span class="arrow" aria-hidden="true">↗</span></a>
+                    <button class="icon-button copy-button" type="button" data-copy="{{ site.email }}" aria-label="Copy email address">
+                        <svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg>
+                        <svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+                    </button>
+                    <span class="copy-toast" role="status" aria-live="polite" data-copy-status></span>
+                </div>
+                <a class="button button-ghost" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noreferrer">GitHub <span class="arrow" aria-hidden="true">↗</span></a>
+                <a class="button button-ghost" href="{{ site.linkedin_url }}" target="_blank" rel="noreferrer">LinkedIn <span class="arrow" aria-hidden="true">↗</span></a>
+                <a class="button button-ghost" href="{{ '/assets/Resume.pdf' | relative_url }}" target="_blank" rel="noreferrer">Resume <span class="arrow" aria-hidden="true">↗</span></a>
+            </div>
         </div>
     </div>
 </section>

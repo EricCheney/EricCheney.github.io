@@ -1,103 +1,77 @@
-<section class="content-section projects-section" id="projects">
-    <div class="section-inner">
-        <div class="section-header reveal">
-            <div class="section-index"><span>01</span> Selected work</div>
-            <h2>Selected projects.</h2>
-            <p>My contribution, results, and technical details.</p>
-        </div>
+<section class="section" id="projects" aria-labelledby="projects-title">
+    <div class="container">
+        <header class="section-head reveal">
+            <p class="section-kicker"><span>01</span> Selected work</p>
+            <h2 id="projects-title">Selected projects.</h2>
+            <p class="section-lede">My contribution, results, and technical details.</p>
+        </header>
 
-        <div class="project-grid">
-            <article class="project-card project-card-featured project-card-dark reveal">
-                <div class="project-card-top">
-                    <span class="project-number">01</span>
-                    <span class="project-year">2025—Present</span>
-                </div>
-                <div class="project-copy">
-                    <p class="project-kicker">Cal Poly Racing · Formula SAE</p>
+        <div class="bento">
+            <article class="card card-flow span-7 reveal" data-spotlight>
+                <svg class="flow-lines" viewBox="0 0 600 400" preserveAspectRatio="none" aria-hidden="true">
+                    <path d="M-20 90 C 120 60, 220 150, 340 120 S 520 60, 640 110"/>
+                    <path d="M-20 150 C 110 130, 240 210, 360 180 S 520 120, 640 170"/>
+                    <path d="M-20 210 C 130 200, 230 270, 350 240 S 530 190, 640 230"/>
+                    <path d="M-20 270 C 120 260, 250 330, 370 300 S 520 250, 640 290"/>
+                    <path d="M-20 330 C 140 320, 240 380, 360 360 S 540 320, 640 350"/>
+                </svg>
+                <div class="card-body">
+                    <div class="card-meta"><span class="kicker">Cal Poly Racing · Formula SAE</span><span class="year">2025–Present</span></div>
                     <h3>Accumulator cooling airbox &amp; plenum</h3>
                     <p>Designed the forced-air airbox and plenum for the race car’s accumulator cooling system.</p>
-                    <div class="project-outcome">
-                        <span>Outcome</span>
-                        <strong>Passed pre-competition technical inspection</strong>
+                    <div class="outcome">
+                        <span class="outcome-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+                        <div><span>Outcome</span><strong>Passed pre-competition technical inspection</strong></div>
                     </div>
                     <details class="technical-details"><summary>Design approach &amp; my contribution</summary><ul><li>Built Siemens NX models and compared airbox/plenum iterations with simplified CFD.</li><li>Balanced flow uniformity, packaging, serviceability, and safety constraints.</li><li>Coordinated mechanical interfaces with Electrical and Chassis subteams.</li></ul></details>
+                    <ul class="tag-list" aria-label="Technologies"><li>Siemens NX</li><li>CFD</li><li>Battery thermal</li></ul>
                 </div>
-                <ul class="tag-list" aria-label="Technologies">
-                    <li>Siemens NX</li>
-                    <li>CFD</li>
-                    <li>Battery thermal</li>
-                </ul>
             </article>
 
-            <article class="project-card project-card-result reveal">
-                <div class="project-card-top">
-                    <span class="project-number">02</span>
-                    <span class="project-year">2024—2025</span>
-                </div>
-                <div class="result-figure" aria-label="Up to 15 percent lower temperatures">
-                    <strong>Up to 15%</strong>
-                    <span>lower system temperatures</span>
-                </div>
-                <div class="project-copy">
-                    <p class="project-kicker">Thermal optimization</p>
+            <article class="card card-result span-5 reveal" data-spotlight>
+                <div class="card-body">
+                    <div class="card-meta"><span class="kicker">Thermal optimization</span><span class="year">2024–2025</span></div>
+                    <div class="result-figure" aria-label="Up to 15 percent lower temperatures">
+                        <strong class="thermal-text">Up to 15%</strong>
+                        <span>lower system temperatures</span>
+                        <div class="thermal-scale" aria-hidden="true"><i></i></div>
+                    </div>
                     <h3>Small-form-factor cooling</h3>
-                    <p>Designed a 3D-printed shroud and bracket to improve Mini-ITX system cooling.</p><details class="technical-details"><summary>Modeling &amp; validation</summary><ul><li>Modeled airflow and thermal performance in Ansys Icepak and Simcenter Flotherm.</li><li>Validated the models with hands-on temperature testing.</li><li>Measured up to 15% lower system temperatures.</li></ul></details><p class="empty-copy" hidden></p>
+                    <p>Designed a 3D-printed shroud and bracket to improve Mini-ITX system cooling.</p>
+                    <details class="technical-details"><summary>Modeling &amp; validation</summary><ul><li>Modeled airflow and thermal performance in Ansys Icepak and Simcenter Flotherm.</li><li>Validated the models with hands-on temperature testing.</li><li>Measured up to 15% lower system temperatures.</li></ul></details>
+                    <ul class="tag-list" aria-label="Technologies"><li>Icepak</li><li>Flotherm</li><li>3D printing</li></ul>
                 </div>
-                <ul class="tag-list" aria-label="Technologies">
-                    <li>Icepak</li>
-                    <li>Flotherm</li>
-                    <li>3D printing</li>
-                </ul>
             </article>
 
             {% include fan-controller.html %}
 
             {% include course-projects.html %}
 
-            <article class="project-card project-card-image reveal">
-                <a class="project-image" href="https://github.com/EricCheney/DC-Motor" target="_blank" rel="noreferrer" aria-label="View the DC motor project on GitHub">
-                    <img src="{{ '/assets/images/stator.png' | relative_url }}" alt="CAD rendering of a custom DC motor rotor" loading="lazy">
+            <article class="card card-media-top span-6 reveal" data-spotlight>
+                <a class="card-media" href="https://github.com/EricCheney/DC-Motor" target="_blank" rel="noreferrer" aria-label="View the DC motor project on GitHub">
+                    <img src="{{ '/assets/images/stator.png' | relative_url }}" alt="CAD rendering of a custom DC motor rotor" width="840" height="561" loading="lazy" decoding="async">
                 </a>
-                <div class="project-card-body">
-                    <div class="project-card-top">
-                        <span class="project-number">03</span>
-                        <a class="project-link" href="https://github.com/EricCheney/DC-Motor" target="_blank" rel="noreferrer">GitHub ↗</a>
-                    </div>
-                    <div class="project-copy">
-                        <p class="project-kicker">Electromechanical design</p>
-                        <h3>Custom DC motor rotor</h3>
-                        <p>Designed and 3D printed the rotor for a custom motor that delivered the strongest performance in the class project.</p>
-                    </div>
-                    <ul class="tag-list" aria-label="Technologies">
-                        <li>CAD</li>
-                        <li>Prototyping</li>
-                        <li>Testing</li>
-                    </ul>
+                <div class="card-body">
+                    <div class="card-meta"><span class="kicker">Electromechanical design</span><a class="card-link" href="https://github.com/EricCheney/DC-Motor" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a></div>
+                    <h3>Custom DC motor rotor</h3>
+                    <p>Designed and 3D printed the rotor for a custom motor that delivered the strongest performance in the class project.</p>
+                    <ul class="tag-list" aria-label="Technologies"><li>CAD</li><li>Prototyping</li><li>Testing</li></ul>
                 </div>
             </article>
 
-            <article class="project-card project-card-image reveal">
-                <a class="project-image project-image-photo" href="https://github.com/EricCheney/6.4-Rebuild" target="_blank" rel="noreferrer" aria-label="View the engine rebuild project on GitHub">
-                    <img src="{{ '/assets/images/8.png' | relative_url }}" alt="6.4 liter Power Stroke engine during a full rebuild" loading="lazy">
+            <article class="card card-media-top span-6 reveal" data-spotlight>
+                <a class="card-media card-media-photo" href="https://github.com/EricCheney/6.4-Rebuild" target="_blank" rel="noreferrer" aria-label="View the engine rebuild project on GitHub">
+                    <img src="{{ '/assets/images/8.png' | relative_url }}" alt="6.4 liter Power Stroke engine during a full rebuild" width="880" height="852" loading="lazy" decoding="async">
                 </a>
-                <div class="project-card-body">
-                    <div class="project-card-top">
-                        <span class="project-number">04</span>
-                        <a class="project-link" href="https://github.com/EricCheney/6.4-Rebuild" target="_blank" rel="noreferrer">GitHub ↗</a>
-                    </div>
-                    <div class="project-copy">
-                        <p class="project-kicker">Hands-on systems work</p>
-                        <h3>6.4L Power Stroke rebuild</h3>
-                        <p>Diagnosed damage, completed the machining and rebuild workflow, and restored the engine to full performance.</p>
-                    </div>
-                    <ul class="tag-list" aria-label="Technologies">
-                        <li>Diagnostics</li>
-                        <li>Machining</li>
-                        <li>Assembly</li>
-                    </ul>
+                <div class="card-body">
+                    <div class="card-meta"><span class="kicker">Hands-on systems work</span><a class="card-link" href="https://github.com/EricCheney/6.4-Rebuild" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a></div>
+                    <h3>6.4L Power Stroke rebuild</h3>
+                    <p>Diagnosed damage, completed the machining and rebuild workflow, and restored the engine to full performance.</p>
+                    <ul class="tag-list" aria-label="Technologies"><li>Diagnostics</li><li>Machining</li><li>Assembly</li></ul>
                 </div>
             </article>
+
+            {% include ugv.html %}
         </div>
-        {% include ugv.html %}
     </div>
 </section>

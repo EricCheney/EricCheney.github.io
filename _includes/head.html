@@ -3,7 +3,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ site.site_title }}</title>
     <meta name="description" content="{{ site.description }}">
-    <meta name="theme-color" content="#111b1e">
+    <meta name="theme-color" content="#0a0b0d" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f6f6f3" media="(prefers-color-scheme: light)">
+    <meta name="color-scheme" content="dark light">
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
     <meta property="og:type" content="website">
@@ -20,12 +22,22 @@
     <meta name="twitter:image" content="{{ site.url }}/assets/images/og.png">
     <meta name="twitter:image:alt" content="Eric Cheney — Thermal and Mechanical Engineering">
 
+    <script>
+        (function () {
+            var theme;
+            try { theme = localStorage.getItem('theme'); } catch (e) {}
+            if (theme !== 'light' && theme !== 'dark') {
+                theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            }
+            document.documentElement.dataset.theme = theme;
+            document.documentElement.classList.add('js');
+        })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/vendor/css/normalize.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/portfolio.css' | relative_url }}">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@1&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
     <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
     <link rel="alternate icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
 </head>

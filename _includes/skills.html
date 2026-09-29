@@ -1,18 +1,22 @@
-<section class="content-section experience-section" id="experience">
-    <div class="section-inner">
-        <div class="section-header reveal">
-            <div class="section-index"><span>02</span> Experience</div>
-            <h2>Engineering experience.</h2>
-        </div>
+<section class="section" id="experience" aria-labelledby="experience-title">
+    <div class="container">
+        <header class="section-head reveal">
+            <p class="section-kicker"><span>02</span> Experience</p>
+            <h2 id="experience-title">Engineering experience.</h2>
+        </header>
 
-        <div class="timeline">
-            <article class="timeline-item reveal">
+        <div class="timeline" data-timeline>
+            <div class="timeline-rail" aria-hidden="true"><span data-timeline-fill></span></div>
+            <ol class="timeline-list">
+
+            <li class="timeline-item reveal">
                 <div class="timeline-meta">
-                    <span>Jun—Aug 2026</span>
+                    <span class="timeline-date">Jun–Aug 2026</span>
                     <span>San Jose, CA</span>
                 </div>
-                <div class="timeline-content">
-                    <p class="timeline-company">Cisco</p>
+                <span class="timeline-node" aria-hidden="true"></span>
+                <article class="card timeline-card" data-spotlight>
+                    <p class="kicker">Cisco</p>
                     <h3>Thermal Engineering Intern</h3>
                     <p>Evaluated cooling configurations on a 3 kW thermal test vehicle; measured approximately 40% less warpage in revised test boards.</p>
                     <details class="technical-details"><summary>Testing methods &amp; additional work</summary><ul>
@@ -21,16 +25,17 @@
                         <li>Measured an approximately 40% reduction in thermally induced board warpage and standardized repeatable calibration and data-collection workflows.</li>
                         <li>Prototyped an AI-enabled failure-analysis database, dashboard, and agent for Cisco’s Innovation Challenge.</li>
                     </ul></details>
-                </div>
-            </article>
+                </article>
+            </li>
 
-            <article class="timeline-item reveal">
+            <li class="timeline-item reveal">
                 <div class="timeline-meta">
-                    <span>May—Aug 2024</span>
+                    <span class="timeline-date">May–Aug 2024</span>
                     <span>Ames, IA</span>
                 </div>
-                <div class="timeline-content">
-                    <p class="timeline-company">Ames National Laboratory · U.S. DOE</p>
+                <span class="timeline-node" aria-hidden="true"></span>
+                <article class="card timeline-card" data-spotlight>
+                    <p class="kicker">Ames National Laboratory · U.S. DOE</p>
                     <h3>Mechanical Engineering Intern</h3>
                     <p>Improved laboratory tooling and identified inventory and thermal-system inefficiencies, saving over $10,000.</p>
                     <details class="technical-details"><summary>Laboratory work &amp; responsibilities</summary><ul>
@@ -38,64 +43,75 @@
                         <li>Audited metal inventory and thermal-system components, identifying inefficiencies and saving more than $10,000.</li>
                         <li>Supported advanced-materials research through XRF analysis, thermocouple fabrication, furnace operations, and lab-safety updates.</li>
                     </ul></details>
-                </div>
-            </article>
+                </article>
+            </li>
 
-            <article class="timeline-item reveal">
+            <li class="timeline-item reveal">
                 <div class="timeline-meta">
-                    <span>Sep 2025—Present</span>
+                    <span class="timeline-date">Sep 2025–Present</span>
                     <span>San Luis Obispo, CA</span>
                 </div>
-                <div class="timeline-content">
-                    <p class="timeline-company">Cal Poly Racing · Formula SAE</p>
+                <span class="timeline-node timeline-node-live" aria-hidden="true"></span>
+                <article class="card timeline-card" data-spotlight>
+                    <p class="kicker">Cal Poly Racing · Formula SAE</p>
                     <h3>Battery Systems Engineer</h3>
                     <p>Developing accumulator cooling hardware with the Battery Systems team and coordinating mechanical interfaces across Electrical and Chassis.</p>
-                </div>
-            </article>
+                </article>
+            </li>
+            </ol>
         </div>
     </div>
 </section>
 
-<section class="content-section capabilities-section" id="capabilities">
-    <div class="section-inner">
-        <div class="section-header reveal">
-            <div class="section-index"><span>03</span> Capabilities</div>
-            <h2>Technical skills.</h2>
-        </div>
+<section class="section" id="capabilities" aria-labelledby="capabilities-title">
+    <div class="container">
+        <header class="section-head reveal">
+            <p class="section-kicker"><span>03</span> Capabilities</p>
+            <h2 id="capabilities-title">Technical skills.</h2>
+        </header>
 
         <div class="capability-grid">
-            <article class="capability-card reveal">
-                <span>Thermal &amp; analysis</span>
+            <article class="card capability reveal" data-spotlight>
+                <span class="capability-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 14.76V4.5a2 2 0 0 0-4 0v10.26a4 4 0 1 0 4 0Z"/><path d="M12 17.5v-6"/></svg></span>
+                <span class="kicker">Thermal &amp; analysis</span>
                 <h3>Thermal analysis &amp; testing</h3>
                 <p>TIM testing, thermal test vehicles, heatsinks, liquid-cooled cold plates, Ansys Icepak, and Simcenter Flotherm.</p>
             </article>
-            <article class="capability-card reveal">
-                <span>CAD &amp; engineering</span>
+            <article class="card capability reveal" data-spotlight>
+                <span class="capability-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2.5 3.5 7.25v9.5L12 21.5l8.5-4.75v-9.5Z"/><path d="M3.5 7.25 12 12l8.5-4.75M12 12v9.5"/></svg></span>
+                <span class="kicker">CAD &amp; engineering</span>
                 <h3>CAD &amp; metrology</h3>
                 <p>Siemens NX, SolidWorks, Fusion 360, Autodesk Inventor, LTspice, GD&amp;T, and metrology.</p>
             </article>
-            <article class="capability-card reveal">
-                <span>Manufacturing</span>
+            <article class="card capability reveal" data-spotlight>
+                <span class="capability-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0 5.3 5.3l-8.6 8.6a2.1 2.1 0 0 1-3-3Z"/><path d="M14.7 6.3 17.5 3.5M20.5 6.5l-2.8 2.8"/></svg></span>
+                <span class="kicker">Manufacturing</span>
                 <h3>Fabrication &amp; assembly</h3>
                 <p>3D printing, manual mill and lathe work, TIG/MIG welding, fixturing, and hands-on diagnostics.</p>
             </article>
-            <article class="capability-card reveal">
-                <span>Programming &amp; data</span>
+            <article class="card capability reveal" data-spotlight>
+                <span class="capability-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M13.5 4.5l-3 15"/></svg></span>
+                <span class="kicker">Programming &amp; data</span>
                 <h3>Programming &amp; data</h3>
                 <p>MATLAB, C++, Excel, AI-agent prototyping, and dashboard and database development.</p>
             </article>
         </div>
 
-        <div class="education-grid reveal" aria-labelledby="education-title">
-            <div>
-                <p class="eyebrow" id="education-title">Education</p>
-                <h3>California Polytechnic State University, San Luis Obispo</h3>
-                <p>B.S. Mechanical Engineering · Expected May 2027 · GPA 3.50/4.00</p>
-                <small>Formula SAE Battery Systems · ASME · ASHRAE</small>
+        <div class="card education reveal" aria-labelledby="education-title" data-spotlight>
+            <div class="education-head">
+                <span class="capability-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 9.5 12 4.5l10 5-10 5Z"/><path d="M6 11.5v5c0 1.4 2.7 3 6 3s6-1.6 6-3v-5M22 9.5v6"/></svg></span>
+                <p class="kicker" id="education-title">Education</p>
             </div>
-            <div>
-                <h3>Evergreen Valley College</h3>
-                <p>A.S. Mechanical Engineering · May 2025</p>
+            <div class="education-grid">
+                <div>
+                    <h3>California Polytechnic State University, San Luis Obispo</h3>
+                    <p>B.S. Mechanical Engineering · Expected May 2027 · GPA 3.50/4.00</p>
+                    <ul class="tag-list" aria-label="Activities"><li>Formula SAE Battery Systems</li><li>ASME</li><li>ASHRAE</li></ul>
+                </div>
+                <div>
+                    <h3>Evergreen Valley College</h3>
+                    <p>A.S. Mechanical Engineering · May 2025</p>
+                </div>
             </div>
         </div>
     </div>
