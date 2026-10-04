@@ -1,0 +1,76 @@
+<article class="card card-wide itherm span-12 reveal" id="cold-plate" aria-labelledby="cold-plate-title" data-spotlight>
+    <div class="itherm-layout">
+        <div class="card-body">
+            <div class="card-meta">
+                <span class="kicker">ASME K-16 / IEEE ITherm student competition · 2026–27</span>
+                <span class="status-chip"><span class="pulse pulse-sm" aria-hidden="true"></span>In progress · Early CFD results</span>
+            </div>
+            <h3 id="cold-plate-title">GPU &amp; HBM liquid cold plate</h3>
+            <p>I&rsquo;m designing an additively manufactured copper cold plate for a 1.49 kW GPU/HBM thermal test vehicle: two GPU dies with hot cores up to 200 W/cm², surrounded by eight HBM memory stacks, all cooled by 45 °C water at 2.25 L/min. Designs are scored on how far they lower peak GPU and HBM temperatures compared with a baseline fin plate, with HBM weighted at 70% and a penalty for pressure drop above 4 psi.</p>
+            <p>I&rsquo;m handling the full design and analysis myself, from the conjugate heat transfer model in Ansys Fluent and the hand calculations that check it, to screening fin geometries and developing a fin concept around the limits of fine-feature copper printing.</p>
+            <dl class="spec-grid" aria-label="Design problem">
+                <div><dt>1,492.8 W</dt><dd>Total heat load across 10 chips</dd></div>
+                <div><dt>630 cells</dt><dd>2 × 2 mm heater map, modeled cell by cell</dd></div>
+                <div><dt>Re ≈ 110</dt><dd>Laminar flow in the 0.1 mm fin channels</dd></div>
+                <div><dt>&lt; 4 psi</dt><dd>Pressure-drop target before penalties</dd></div>
+            </dl>
+        </div>
+
+        <figure class="powermap-panel">
+            <div class="powermap-frame">
+                {% include itherm-powermap.svg %}
+            </div>
+            <figcaption>
+                <span class="powermap-title">Competition heat-flux map</span>
+                <span class="powermap-scale" aria-hidden="true"><i></i></span>
+                <span class="powermap-ticks" aria-hidden="true"><span>0</span><span>50</span><span>200 W/cm²</span></span>
+            </figcaption>
+        </figure>
+    </div>
+
+    <div class="cfd-gallery" aria-label="CFD model and early results">
+        <figure>
+            <a href="{{ '/assets/images/itherm-fluent-setup.jpg' | relative_url }}" data-lightbox aria-label="Open the Fluent model setup at full size">
+                <img src="{{ '/assets/images/itherm-fluent-setup.jpg' | relative_url }}" alt="Ansys Fluent model of the cold plate manifold, with the water inlet marked in blue and the outlet in red" width="700" height="450" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Fluent model with the inlet (blue) and outlet (red) boundaries</figcaption>
+        </figure>
+        <figure>
+            <a href="{{ '/assets/images/itherm-cfd-velocity.jpg' | relative_url }}" data-lightbox aria-label="Open the velocity contour at full size">
+                <img src="{{ '/assets/images/itherm-cfd-velocity.jpg' | relative_url }}" alt="Velocity magnitude contour on a section through the manifold, from 0 to 1.16 meters per second, peaking where the flow turns up into the outlet" width="948" height="598" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Velocity through the manifold section, 0 to 1.16 m/s</figcaption>
+        </figure>
+        <figure>
+            <a href="{{ '/assets/images/itherm-cfd-temperature-section.jpg' | relative_url }}" data-lightbox aria-label="Open the symmetry-plane temperature contour at full size">
+                <img src="{{ '/assets/images/itherm-cfd-temperature-section.jpg' | relative_url }}" alt="Static temperature contour on the symmetry plane, with the hottest fluid in a thin layer just above the heated GPU region of the plate" width="912" height="602" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Static temperature on the symmetry plane, hottest just above the GPUs</figcaption>
+        </figure>
+        <figure>
+            <a class="thumb-right" href="{{ '/assets/images/itherm-cfd-chip-temperature.jpg' | relative_url }}" data-lightbox aria-label="Open the chip temperature contour at full size">
+                <img src="{{ '/assets/images/itherm-cfd-chip-temperature.jpg' | relative_url }}" alt="Static temperature contour on the chip plane from 318 to 377 kelvin, with the HBM stacks cooler and the GPU hot spots hottest" width="1155" height="600" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Chip-plane temperature, 318 to 377 K</figcaption>
+        </figure>
+    </div>
+
+    <div class="card-body fan-details">
+        <details class="technical-details">
+            <summary>Approach &amp; current progress</summary>
+            <p><strong>Heat-load model:</strong> I wrote a script that converts the competition&rsquo;s spreadsheet power map into a Fluent heat-flux UDF covering all 630 heater cells. It checks that the cell powers add up to the published totals, and in tests on grids that don&rsquo;t line up with the heater cells, the integrated load stayed within 0.5% of 1,492.8 W.</p>
+            <p><strong>Hand calculations:</strong> An energy balance puts the mixed outlet near 54.6 °C, and a laminar channel model gives a Reynolds number around 110 and roughly 0.5 psi of friction loss through the covered GPU channels. These set expectations for the CFD and serve as convergence sanity checks.</p>
+            <p><strong>Fin screening:</strong> Before committing to CFD, I compared 169 straight-fin thickness and spacing combinations with a reduced-order fin model to bound the design space against the printer&rsquo;s minimum feature size.</p>
+            <p><strong>Meshing and run time:</strong> Resolving every 0.1 mm fin channel takes several cells across each gap, which puts a full-plate mesh at an estimated 15 to 20 million cells. The manifold, fins and power map are mirror-symmetric about the plane through the outlet slot, so after confirming that symmetry on the extracted fluid body, I model half the plate with a symmetry boundary. That halves the cell count and the compute per run, which matters when every design candidate needs its own converged solution.</p>
+            <p><strong>Consistent comparisons:</strong> The baseline and each candidate run with identical materials, temperature-dependent water and silicon properties, boundary conditions and reporting. Results need a mesh-independence study and a closed heat balance before they count.</p>
+            <p><strong>Next:</strong> Mesh-independence checks, candidate comparisons scored with the competition&rsquo;s figure of merit, and the white paper. I&rsquo;ll post design details and final results here after submission.</p>
+        </details>
+        <ul class="tag-list" aria-label="Project technologies">
+            <li>Ansys Fluent</li>
+            <li>Conjugate heat transfer</li>
+            <li>Liquid cooling</li>
+            <li>Additive manufacturing</li>
+            <li>Python</li>
+        </ul>
+    </div>
+</article>
