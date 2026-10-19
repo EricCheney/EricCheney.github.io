@@ -7,7 +7,7 @@
         </header>
 
         <div class="bento">
-            <article class="card card-flow span-7 reveal" data-spotlight>
+            <article class="card card-flow span-12 reveal" id="fsae" data-spotlight>
                 <svg class="flow-lines" viewBox="0 0 600 400" preserveAspectRatio="none" aria-hidden="true">
                     <path d="M-20 90 C 120 60, 220 150, 340 120 S 520 60, 640 110"/>
                     <path d="M-20 150 C 110 130, 240 210, 360 180 S 520 120, 640 170"/>
@@ -15,31 +15,53 @@
                     <path d="M-20 270 C 120 260, 250 330, 370 300 S 520 250, 640 290"/>
                     <path d="M-20 330 C 140 320, 240 380, 360 360 S 540 320, 640 350"/>
                 </svg>
-                <div class="card-body">
-                    <div class="card-meta"><span class="kicker">Cal Poly Racing · Formula SAE</span><span class="year">2025–Present</span></div>
-                    <h3>Accumulator cooling airbox &amp; plenum</h3>
-                    <p>Designed the forced-air airbox and plenum for the race car’s accumulator cooling system.</p>
-                    <div class="outcome">
-                        <span class="outcome-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
-                        <div><span>Outcome</span><strong>Passed pre-competition technical inspection</strong></div>
+                <div class="cad-strip">
+                    <figure>
+                        <a href="{{ '/assets/images/fsae-accumulator-ducting.jpg' | relative_url }}" data-lightbox aria-label="Open the accumulator and ducting CAD view at full size">
+                            <img src="{{ '/assets/images/fsae-accumulator-ducting.jpg' | relative_url }}" alt="Siemens NX assembly of the accumulator container with its cooling airbox and two curved intake ducts, packaged inside the car's main and front roll hoops" width="838" height="660" loading="lazy" decoding="async">
+                        </a>
+                        <figcaption>Accumulator, airbox and ducting packaged in the chassis</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="{{ '/assets/images/fsae-airbox-plenum.jpg' | relative_url }}" data-lightbox aria-label="Open the airbox and plenum CAD view at full size">
+                            <img src="{{ '/assets/images/fsae-airbox-plenum.jpg' | relative_url }}" alt="Siemens NX view into the top of the accumulator airbox and plenum, showing the internal flow surfaces and perforated sections" width="806" height="434" loading="lazy" decoding="async">
+                        </a>
+                        <figcaption>Airbox and plenum detail</figcaption>
+                    </figure>
+                </div>
+                <div class="card-body split-body">
+                    <div>
+                        <div class="card-meta"><span class="kicker">Cal Poly Racing · Formula SAE</span><span class="year">2025–Present</span></div>
+                        <h3>Accumulator cooling airbox &amp; plenum</h3>
+                        <p>Designed the forced-air airbox and plenum for the race car’s accumulator cooling system.</p>
+                        <div class="outcome">
+                            <span class="outcome-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+                            <div><span>Outcome</span><strong>Passed pre-competition technical inspection</strong></div>
+                        </div>
                     </div>
-                    <details class="technical-details"><summary>Design approach &amp; my contribution</summary><ul><li>Built Siemens NX models and compared airbox/plenum iterations with simplified CFD.</li><li>Balanced flow uniformity, packaging, serviceability, and safety constraints.</li><li>Coordinated mechanical interfaces with Electrical and Chassis subteams.</li></ul></details>
-                    <ul class="tag-list" aria-label="Technologies"><li>Siemens NX</li><li>CFD</li><li>Battery thermal</li></ul>
+                    <div>
+                        <details class="technical-details"><summary>Design approach &amp; my contribution</summary><ul><li>Built Siemens NX models and compared airbox/plenum iterations with simplified CFD.</li><li>Balanced flow uniformity, packaging, serviceability, and safety constraints.</li><li>Coordinated mechanical interfaces with Electrical and Chassis subteams.</li></ul></details>
+                        <ul class="tag-list" aria-label="Technologies"><li>Siemens NX</li><li>CFD</li><li>Battery thermal</li></ul>
+                    </div>
                 </div>
             </article>
 
-            <article class="card card-result span-5 reveal" data-spotlight>
-                <div class="card-body">
-                    <div class="card-meta"><span class="kicker">Thermal optimization</span><span class="year">2024–2025</span></div>
-                    <div class="result-figure" aria-label="Up to 15 percent lower temperatures">
-                        <strong class="thermal-text">Up to 15%</strong>
-                        <span>lower system temperatures</span>
-                        <div class="thermal-scale" aria-hidden="true"><i></i></div>
+            <article class="card card-result span-12 reveal" data-spotlight>
+                <div class="card-body split-body result-split">
+                    <div>
+                        <div class="card-meta"><span class="kicker">Thermal optimization</span><span class="year">2024–2025</span></div>
+                        <div class="result-figure" aria-label="Up to 15 percent lower temperatures">
+                            <strong class="thermal-text">Up to 15%</strong>
+                            <span>lower system temperatures</span>
+                            <div class="thermal-scale" aria-hidden="true"><i></i></div>
+                        </div>
                     </div>
-                    <h3>Small-form-factor cooling</h3>
-                    <p>Designed a 3D-printed shroud and bracket to improve Mini-ITX system cooling.</p>
-                    <details class="technical-details"><summary>Modeling &amp; validation</summary><ul><li>Modeled airflow and thermal performance in Ansys Icepak and Simcenter Flotherm.</li><li>Validated the models with hands-on temperature testing.</li><li>Measured up to 15% lower system temperatures.</li></ul></details>
-                    <ul class="tag-list" aria-label="Technologies"><li>Icepak</li><li>Flotherm</li><li>3D printing</li></ul>
+                    <div>
+                        <h3>Small-form-factor cooling</h3>
+                        <p>Designed a 3D-printed shroud and bracket to improve Mini-ITX system cooling.</p>
+                        <details class="technical-details"><summary>Modeling &amp; validation</summary><ul><li>Modeled airflow and thermal performance in Ansys Icepak and Simcenter Flotherm.</li><li>Validated the models with hands-on temperature testing.</li><li>Measured up to 15% lower system temperatures.</li></ul></details>
+                        <ul class="tag-list" aria-label="Technologies"><li>Icepak</li><li>Flotherm</li><li>3D printing</li></ul>
+                    </div>
                 </div>
             </article>
 
