@@ -167,8 +167,8 @@
       const px = (event.clientX - rect.left) / rect.width;
       const py = (event.clientY - rect.top) / rect.height;
       tilt.style.transition = 'transform .15s ease-out';
-      tilt.style.setProperty('--ry', `${(px - 0.5) * 8}deg`);
-      tilt.style.setProperty('--rx', `${(0.5 - py) * 6}deg`);
+      tilt.style.setProperty('--ry', `${(px - 0.5) * 4}deg`);
+      tilt.style.setProperty('--rx', `${(0.5 - py) * 3}deg`);
       tilt.style.setProperty('--gx', `${px * 100}%`);
       tilt.style.setProperty('--gy', `${py * 100}%`);
     });

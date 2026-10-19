@@ -71,11 +71,17 @@
 
             {% include course-projects.html %}
 
-            <article class="card card-media-top span-6 reveal" data-spotlight>
-                <a class="card-media card-media-photo dc-motor-media" href="https://github.com/EricCheney/DC-Motor" target="_blank" rel="noreferrer" aria-label="View the DC motor project on GitHub">
-                    <img src="{{ '/assets/images/dc-motor-assembly.jpg' | relative_url }}" alt="Assembled custom DC motor on its wooden test board, with the lift shaft, wiring, and battery pack" width="810" height="840" loading="lazy" decoding="async">
+            {% include ugv.html %}
+
+            <div class="other-head span-12 reveal">
+                <h3 class="section-kicker">Other projects</h3>
+            </div>
+
+            <article class="card card-compact span-6 reveal" data-spotlight>
+                <a class="compact-media dc-motor-media" href="https://github.com/EricCheney/DC-Motor" target="_blank" rel="noreferrer" aria-label="View the DC motor project on GitHub">
+                    <img src="{{ '/assets/images/dc-motor-assembly-sm.jpg' | relative_url }}" alt="Assembled custom DC motor on its wooden test board, with the lift shaft, wiring, and battery pack" width="617" height="640" loading="lazy" decoding="async">
                 </a>
-                <div class="card-body">
+                <div class="compact-body">
                     <div class="card-meta"><span class="kicker">Electromechanical design</span><a class="card-link" href="https://github.com/EricCheney/DC-Motor" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a></div>
                     <h3>Custom DC motor rotor</h3>
                     <p>Designed and 3D printed the rotor for a custom motor that delivered the strongest performance in the class project.</p>
@@ -83,19 +89,17 @@
                 </div>
             </article>
 
-            <article class="card card-media-top span-6 reveal" data-spotlight>
-                <a class="card-media card-media-photo" href="https://github.com/EricCheney/6.4-Rebuild" target="_blank" rel="noreferrer" aria-label="View the engine rebuild project on GitHub">
-                    <img src="{{ '/assets/images/8.png' | relative_url }}" alt="6.4 liter Power Stroke engine during a full rebuild" width="880" height="852" loading="lazy" decoding="async">
+            <article class="card card-compact span-6 reveal" data-spotlight>
+                <a class="compact-media" href="https://github.com/EricCheney/6.4-Rebuild" target="_blank" rel="noreferrer" aria-label="View the engine rebuild project on GitHub">
+                    <img src="{{ '/assets/images/engine-rebuild.jpg' | relative_url }}" alt="6.4 liter Power Stroke engine during a full rebuild" width="640" height="620" loading="lazy" decoding="async">
                 </a>
-                <div class="card-body">
+                <div class="compact-body">
                     <div class="card-meta"><span class="kicker">Hands-on systems work</span><a class="card-link" href="https://github.com/EricCheney/6.4-Rebuild" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a></div>
                     <h3>6.4L Power Stroke rebuild</h3>
                     <p>Diagnosed damage, completed the machining and rebuild workflow, and restored the engine to full performance.</p>
                     <ul class="tag-list" aria-label="Technologies"><li>Diagnostics</li><li>Machining</li><li>Assembly</li></ul>
                 </div>
             </article>
-
-            {% include ugv.html %}
         </div>
     </div>
 </section>

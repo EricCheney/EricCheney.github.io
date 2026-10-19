@@ -8,10 +8,13 @@
 
     <div class="container hero-inner">
         <div class="hero-copy">
-            <a class="status-pill intro" style="--i:0" href="#contact">
-                <span class="pulse" aria-hidden="true"></span>
-                Seeking full-time roles · Graduating May 2027
-            </a>
+            <div class="hero-id intro" style="--i:0">
+                <img class="hero-avatar" src="{{ '/assets/images/headshot.jpg' | relative_url }}" alt="Headshot of Eric Cheney" width="288" height="288" fetchpriority="high">
+                <div>
+                    <p class="hero-name">Eric Cheney</p>
+                    <a class="hero-status" href="#contact"><span class="pulse" aria-hidden="true"></span>Seeking full-time roles · Graduating May 2027</a>
+                </div>
+            </div>
 
             <h1 id="hero-title" class="hero-title">
                 <span class="line"><span class="intro" style="--i:1">Mechanical engineer.</span></span>
@@ -76,14 +79,4 @@
         </dl>
     </div>
 
-    <div class="marquee" aria-label="Tools and methods">
-        <div class="marquee-track">
-            {% assign tools = "Siemens NX,SolidWorks,Ansys Icepak,Simcenter Flotherm,KiCad,Fusion 360,Autodesk Inventor,LTspice,MATLAB,C++,GD&T,CFD,FEA,TIG / MIG welding,Mill & lathe,3D printing" | split: "," %}
-            {% for pass in (1..2) %}
-            <ul{% if pass == 2 %} aria-hidden="true"{% endif %}>
-                {% for tool in tools %}<li>{{ tool | escape }}</li>{% endfor %}
-            </ul>
-            {% endfor %}
-        </div>
-    </div>
 </section>
